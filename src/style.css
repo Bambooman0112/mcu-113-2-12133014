@@ -8,3 +8,7 @@ h3 {
   border-width: 1px;
   width: 250px;
 }
+
+input[type="text"] {
+  border: solid 1px #999;
+}
