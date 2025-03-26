@@ -22,8 +22,9 @@
         </ul>
       </nav>
       <form>
-        <input type="text" placeholder="產品名稱" />
-        <button type="button">查詢</button>
+        <input id="name" type="text" placeholder="產品名稱" />
+        <button type="button" onclick="onSearch()">查詢</button>
+        <span id="resilt"></span>
       </form>
       <table border="1">
         <tr>
@@ -68,5 +69,6 @@
       </section>
     </section>
     <footer>© 2024</footer>
+    <script src="index.js"></script>
   </body>
 </html>
