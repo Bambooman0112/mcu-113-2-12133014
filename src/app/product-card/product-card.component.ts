@@ -10,4 +10,10 @@ export class ProductCardComponent {
   productName = '書籍 A';
   author = '作者甲、作者乙、作者丙';
   company = '博碩文化';
+
+  isShow = true;
+
+  onSetDisplay(isShow: boolean): void {
+    this.isShow = isShow;
+  }
 }
