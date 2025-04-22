@@ -17,6 +17,8 @@ export class AppComponent {
   isShow = true;
   photoUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img2';
 
+  creatDate = new Date('2025/4/9');
+
   onSetDisplay(isShow: boolean): void {
     this.isShow = isShow;
   }
