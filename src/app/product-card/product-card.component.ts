@@ -13,7 +13,7 @@ export class ProductCardComponent {
   @Input()
   productName?: string;
   @Input()
-  author!: string;
+  authors!: string[];
   @Input()
   company!: string;
   @Input({ transform: booleanAttribute })

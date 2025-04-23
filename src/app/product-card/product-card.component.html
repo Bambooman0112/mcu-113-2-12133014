@@ -4,7 +4,13 @@
   <strong [class.hidden]="!isShow">{{ id }}{{ productName }}</strong>
   <span>{{creatDate | date: 'yyyy-MM-dd'}}</span>
 </div>
-<div>{{ author }}</div>
+<div>
+  @for (author of authors; track $index) {
+  <span>{{ author }}</span>
+  @if (!$last) {
+  <span>、</span>
+  } }
+</div>
 <div class="company">
   <span>{{ company }}</span>
   <span>{{price | currency:'$':'symbol':'4.0'}}</span>
