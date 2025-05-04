@@ -2,7 +2,12 @@
   <button calss="button" (click)="onAdd()">新增</button>
 </div>
 
-<app-product-card-list [products]="products" (view)="onView($event)" (edit)="onEdit($event)"></app-product-card-list>
+<app-product-card-list
+  [products]="products"
+  (view)="onView($event)"
+  (edit)="onEdit($event)"
+  (remove)="onRemove($event)"
+></app-product-card-list>
 <app-pagination
   [pageIndex]="pageIndex"
   [pageSize]=" pageSize"
