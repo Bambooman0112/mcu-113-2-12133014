@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  padding-top: 10px;
+  gap: 20px;
+  justify-content: center;
+
+  img {
+    flex: 0 0 300px;
+  }
+
+  section {
+    padding: 10px 20px;
+    flex: 0 0 450px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    > div {
+      margin-bottom: 20px;
+
+      > strong {
+        display: inline-block;
+        font-size: 18px;
+        width: 120px;
+        text-align: center;
+      }
+      > span {
+        display: inline-block;
+        font-size: 18px;
+      }
+
+      &.button {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 20px;
+          cursor: pointer;
+
+          &.edit {
+            background-color: #007dff;
+            color: white;
+          }
+          &.remove {
+            background-color: #ba1a1a;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
