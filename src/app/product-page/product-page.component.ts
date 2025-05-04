@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
 import { Product } from '../models/product';
 import { Router } from '@angular/router';
@@ -12,12 +12,11 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductPageComponent implements OnInit {
   private router = inject(Router);
-  private productService!: ProductService;
+  private productService = inject(ProductService);
 
   products: Product[] = [];
 
   ngOnInit(): void {
-    this.productService = new ProductService();
     this.products = this.productService.getList();
   }
 
