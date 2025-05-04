@@ -1,5 +1,5 @@
 import { Product } from './../models/product';
-import { Component, input, Input, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 
