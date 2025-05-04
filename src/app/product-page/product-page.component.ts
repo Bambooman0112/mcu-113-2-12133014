@@ -53,8 +53,10 @@ export class ProductPageComponent {
       price: 10000,
     }),
   ];
-
+  onEdit(product: Product): void {
+    this.router.navigate(['products', 'form', product.id]);
+  }
   onView(product: Product): void {
-    this.router.navigate(['products', product.id]);
+    this.router.navigate(['products', 'view', product.id]);
   }
 }
