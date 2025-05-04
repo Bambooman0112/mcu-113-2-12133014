@@ -1,3 +1,15 @@
 :host {
   display: block;
+  padding: 20px;
+  .toobar {
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    border: solid 1px #007bff;
+    color: #007bff;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
 }
