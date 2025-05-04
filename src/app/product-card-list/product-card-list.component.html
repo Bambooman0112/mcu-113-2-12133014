@@ -9,6 +9,7 @@
   [photoUrl]="product.photoUrl"
   [creatDate]="product.createDate"
   [price]="product.price"
+  (view)="view.emit(product)"
 ></app-product-card>
 } @empty {
 <div class="data-empty">無資料</div>
