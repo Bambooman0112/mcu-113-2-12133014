@@ -1,1 +1,7 @@
 <app-product-card-list [products]="products" (view)="onView($event)" (edit)="onEdit($event)"></app-product-card-list>
+<app-pagination
+  [pageIndex]="pageIndex"
+  [pageSize]=" pageSize"
+  [totalCount]="totalCount"
+  (pageIndexChange)="onPageIndexChange($event)"
+></app-pagination>
