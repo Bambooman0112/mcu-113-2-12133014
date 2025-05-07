@@ -1,10 +1,10 @@
-<img [src]="product.photoUrl" . />
+<img [src]="product.photoUrl" />
 <section>
   <h2>{{product.name}}</h2>
   <div>
     <span>作者</span>
-    <span
-      >@for(author of product.authors; track $index){
+    <span>
+      @for(author of product.authors; track $index){
       <span>{{ author }}</span>
       @if (!$last) {
       <span>、</span>

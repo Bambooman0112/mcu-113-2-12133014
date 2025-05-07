@@ -26,10 +26,11 @@ export class ProductPageComponent implements OnInit {
   }
 
   onEdit(product: Product): void {
-    this.router.navigate(['products', 'form', product.id]);
+    this.router.navigate(['product', 'form', product.id]);
   }
+
   onView(product: Product): void {
-    this.router.navigate(['products', 'view', product.id]);
+    this.router.navigate(['product', 'view', product.id]);
   }
 
   onPageIndexChange(pageIndex: number): void {

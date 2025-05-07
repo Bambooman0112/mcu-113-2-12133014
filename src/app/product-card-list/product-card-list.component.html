@@ -9,7 +9,7 @@
   [photoUrl]="product.photoUrl"
   [creatDate]="product.createDate"
   [price]="product.price"
-  (emit)="edit.emit(product)"
+  (edit)="edit.emit(product)"
   (remove)="remove.emit(product)"
   (view)="view.emit(product)"
 ></app-product-card>
