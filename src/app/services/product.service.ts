@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
+import { delay, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -113,12 +114,12 @@ export class ProductService {
     return this._data.find(({ id }) => id === productId)!;
   }
 
-  getList(name: string | undefined, index: number, size: number): { data: Product[]; count: number } {
+  getList(name: string | undefined, index: number, size: number): Observable<{ data: Product[]; count: number }> {
     const starIndex = (index - 1) * size;
     const endIndex = starIndex + size;
 
     const data = name! ? this._data.filter((item) => item.name === name) : [...this._data];
-    return { data: data.slice(starIndex, endIndex), count: this._data.length };
+    return of({ data: data.slice(starIndex, endIndex), count: this._data.length }).pipe(delay(1000));
   }
   add(product: Readonly<Product>): void {
     const id = this._data.length === 0 ? 1 : Math.max(...this._data.map(({ id }) => id)) + 1;
