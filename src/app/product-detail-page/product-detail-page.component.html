@@ -1,10 +1,10 @@
-<img [src]="product.photoUrl" />
+<img [src]="product().photoUrl" />
 <section>
-  <h2>{{product.name}}</h2>
+  <h2>{{product().name}}</h2>
   <div>
     <span>作者</span>
     <span>
-      @for(author of product.authors; track $index){
+      @for(author of product().authors; track $index){
       <span>{{ author }}</span>
       @if (!$last) {
       <span>、</span>
@@ -13,11 +13,11 @@
   </div>
   <div>
     <strong>公司</strong>
-    <span>{{product.company}}</span>
+    <span>{{product().company}}</span>
   </div>
   <div>
     <strong>價格</strong>
-    <span>{{product.price| currency:'$':'symbol':'4.0'}}</span>
+    <span>{{product().price| currency:'$':'symbol':'4.0'}}</span>
   </div>
   <div class="button">
     <button type="button" (click)="onBack()">返回</button>
