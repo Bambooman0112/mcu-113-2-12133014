@@ -6,7 +6,7 @@ GET http://[::]:3000/products HTTP/1.1
 
 ### Get List Paginate
 
-GET http://[::]:3000/products?_page=1&_per_page=1 HTTP/1.1
+GET http://[::]:3000/products?_page=1&_per_page=5&name=書籍 A HTTP/1.1
 
 ###
 
