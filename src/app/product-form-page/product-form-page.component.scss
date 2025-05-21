@@ -1,0 +1,44 @@
+.container {
+  margin: 20px auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > label,
+    > div {
+      flex-basis: 150px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    > input {
+      flex-grow: 1;
+      padding: 5px 10px;
+      font-size: 20px;
+    }
+  }
+  .form-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    > button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &.save {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+}
