@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" [formGroup]="form">
   <div class="form-item">
     <div class="form-column">
       <label>名稱</label>
-      <input type="text" />
+      <input type="text" formControlName="name" />
     </div>
   </div>
   <div class="form-item">
@@ -14,17 +14,18 @@
   <div class="form-item">
     <div class="form-column">
       <label>出版社</label>
-      <input type="text" />
+      <input type="text" formControlName="company" />
     </div>
   </div>
   <div class="form-item">
     <div class="form-column">
       <label>單價</label>
-      <input type="text" />
+      <input type="text" formControlName="price" />
     </div>
   </div>
   <div class="form-action">
     <button type="button">取消</button>
     <button type="button" class="save">儲存</button>
   </div>
+  <pre>{{form.value | json}} </pre>
 </div>
