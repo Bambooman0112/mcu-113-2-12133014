@@ -5,22 +5,32 @@
   flex-direction: column;
   gap: 20px;
 
-  .form-column {
+  .form-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 
-    > label,
-    > div {
-      flex-basis: 150px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 400;
+    .form-column {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > label,
+      > div {
+        flex-basis: 150px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      > input {
+        flex-grow: 1;
+        padding: 5px 10px;
+        font-size: 20px;
+      }
     }
-    > input {
-      flex-grow: 1;
-      padding: 5px 10px;
-      font-size: 20px;
+
+    .error-message {
+      margin-left: 150px;
+      color: red;
     }
   }
   .form-action {
@@ -38,6 +48,12 @@
       &.save {
         background-color: #007bff;
         color: white;
+
+        &:disabled {
+          background-color: #ccc;
+          color: #999;
+          cursor: not-allowed;
+        }
       }
     }
   }
