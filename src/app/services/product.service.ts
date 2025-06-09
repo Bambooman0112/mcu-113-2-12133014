@@ -127,7 +127,7 @@ export class ProductService {
       map((data) => {
         const starIndex = (index - 1) * size;
         const endIndex = starIndex + size;
-        return { data: data.slice(starIndex, endIndex), count: this._data.length };
+        return { data: data.slice(starIndex, endIndex), count: data.length };
       }),
       delay(500)
     );
@@ -139,8 +139,8 @@ export class ProductService {
     return of(newProduct);
   }
 
-  remove(porductId: string): Observable<Product> {
-    const index = this._data.findIndex(({ id }) => id === porductId);
+  remove(productId: string): Observable<Product> {
+    const index = this._data.findIndex(({ id }) => id === productId);
     const [product] = this._data.splice(index, 1);
     return of(product);
   }

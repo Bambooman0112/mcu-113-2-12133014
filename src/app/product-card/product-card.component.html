@@ -1,7 +1,7 @@
 <img [src]="photoUrl()" />
 
 <div class="content">
-  <strong [class.hidden]="!isShow">{{ id() }}{{ productName() }}</strong>
+  <strong [class.hidden]="!isShow">{{ id() }}.{{ productName() }}</strong>
   <span>{{creatDate() | date: 'yyyy-MM-dd'}}</span>
 </div>
 <div>
