@@ -56,7 +56,7 @@ export class ProductFormPageComponent implements OnInit {
   }
 
   onCancel(): void {
-    this.router.navigate(['porducts']);
+    this.router.navigate(['products']);
   }
 
   onSave(): void {

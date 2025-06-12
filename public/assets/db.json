@@ -111,18 +111,6 @@
       "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "createDate": "2023-10-17T00:00:00.000+08:00",
       "price": 10000
-    },
-    {
-      "id": "ecaf",
-      "name": "你好",
-      "company": "你好喔",
-      "authors": [
-        "我是誰"
-      ],
-      "price": 1000,
-      "isShow": true,
-      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-      "createDate": "2025-06-09T16:20:01.479Z"
     }
   ],
   "authors": []
